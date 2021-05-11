@@ -1,29 +1,29 @@
-const nextArrow = document.querySelector("#previous");
-const test = document.querySelector("#next");
+const previous = document.querySelector("#previous");
+const next = document.querySelector("#next");
 const blogpostsContainer = document.querySelector("#content-wrapper");
 let pagenumber = 1;
 const url = `https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/`;
 
-function test1() {
+function nextPage() {
   pagenumber++;
   if (pagenumber === 5) {
     pagenumber = 1;
   }
-  console.log(pagenumber);
+
   getBlogPosts();
 }
-function test2() {
+function previousPage() {
   pagenumber--;
   if (pagenumber === 0) {
     pagenumber = 4;
   }
-  console.log(pagenumber);
+
   getBlogPosts();
 }
 
-nextArrow.addEventListener("click", test2);
+previous.addEventListener("click", previousPage);
 
-test.addEventListener("click", test1);
+next.addEventListener("click", nextPage);
 
 async function getBlogPosts() {
   try {
@@ -45,8 +45,4 @@ async function getBlogPosts() {
   }
 }
 
-///http://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/?page=1&per_page=4
-
 getBlogPosts();
-
-console.log(window.innerWidth);

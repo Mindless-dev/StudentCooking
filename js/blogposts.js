@@ -10,12 +10,9 @@ async function getBlogPosts() {
     const blogs = await response.json();
     latestPosts.innerHTML = "";
     allPosts.innerHTML = "";
-    console.log(blogs);
     let i = 0;
-    console.log(blogs[0].better_featured_image.source_url);
 
     for (i; i < 4; i++) {
-      console.log(blogs[i].better_featured_image.alt_text);
       latestPosts.innerHTML += `<section class="blogpostLatest"><img class="blogImgLatest" src="${blogs[i].better_featured_image.source_url}" alt= "${blogs[i].better_featured_image.alt_text}">
       <div class="blogpostDescription">
       <h3>${blogs[i].title.rendered}</h3>
