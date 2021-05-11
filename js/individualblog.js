@@ -2,9 +2,9 @@ const querystring = document.location.search;
 const params = new URLSearchParams(querystring);
 const id = params.get("id");
 const containerBlog = document.querySelector("#blogpost");
-const url = "http://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/" + id;
+const url = "https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/" + id;
 const title = document.querySelector("title");
-const url2 = "http://holmenfrontend.no/foodblog/wp-json/wp/v2/posts";
+const url2 = "https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts";
 const relatedBlogs = document.querySelector("#relatedBlogs");
 const modalContainer = document.querySelector("#modalContainer");
 async function getBlog() {

@@ -2,7 +2,7 @@ const nextArrow = document.querySelector("#previous");
 const test = document.querySelector("#next");
 const blogpostsContainer = document.querySelector("#content-wrapper");
 let pagenumber = 1;
-const url = `http://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/`;
+const url = `https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/`;
 
 function test1() {
   pagenumber++;

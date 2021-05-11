@@ -2,7 +2,7 @@ const viewAllBtn = document.querySelector("#allPosts");
 const latestPosts = document.querySelector("#latestBlogPosts");
 const allPosts = document.querySelector("#allBlogPosts");
 const url =
-  "http://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/?per_page=100";
+  "https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts/?per_page=100";
 
 async function getBlogPosts() {
   try {
