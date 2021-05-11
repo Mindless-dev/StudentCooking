@@ -1,0 +1,82 @@
+.aboutImg {
+  background-image: url("../images/resizedheaderimg.jpg");
+  height: 216px;
+  max-width: 340px;
+  background-repeat: none;
+  border: none;
+  background-size: 340px;
+  background-blend-mode: color;
+}
+
+.messageButton {
+  background-color: #2d8091;
+  text-decoration: none;
+  color: white;
+  font-size: 21px;
+  max-width: 212px;
+  border-radius: 26px;
+  height: 47px;
+  line-height: 200%;
+  display: flex;
+  justify-content: center;
+  margin: 25px 4px;
+}
+
+.messageButton:hover {
+  text-decoration: underline 2px;
+}
+
+.socialMediaInfo {
+  display: flex;
+  flex-direction: column;
+}
+.social {
+  display: flex;
+}
+
+.social > p {
+  margin: 11px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+.aboutUsP {
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+@media (min-width: 600px) {
+  .aboutUsP {
+    max-width: 580px;
+  }
+  .contentLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .aboutImg {
+    height: 390px;
+    max-width: 580px;
+    background-repeat: none;
+    border: none;
+    background-size: 580px;
+    background-blend-mode: color;
+  }
+}
+
+@media (min-width: 960px) {
+  .aboutImg {
+    height: 590px;
+    max-width: 960px;
+    background-repeat: none;
+    border: none;
+    background-size: 960px;
+    background-blend-mode: color;
+  }
+  .aboutUsP {
+    max-width: 960px;
+  }
+}

@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Student Cooking | Individual Blogpost</title>
+    <meta
+      name="description"
+      content="a specific blogpost made by the student cooking team"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/global_styles.css" />
+    <link rel="stylesheet" href="css/individual_blog.css" />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="images/blogLogo1.png"
+          alt="community science muesum logo"
+          class="logo"
+      /></a>
+      <label class="hamburger-label" for="hamburger-menu"
+        ><i class="navIcon fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" >Home</a>
+          </li>
+          <li><a href="blogposts.html">All blogposts</a></li>
+          <li><a href="about.html"> About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="blogpost">Loading...</div>
+      <div id="modalContainer"></div>
+      <section class="comments">
+        <div class="comment">
+          <h4>Name</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            consectetur nobis facere.
+          </p>
+          <div class="commentVote">
+            <section class="upvote">
+              <span id=upvote><i class="fas fa-chevron-circle-up"></i></span>
+              <p>0</p>
+            </section>
+            <section class="downvote">
+              <span id="downvote"><i class="fas fa-chevron-circle-down"></i></span>
+              <p>0</p>
+              </section>
+          </div>
+        </div>
+        <button class="commentBtn">Comment</button>
+      </section>
+      
+      </section>
+      <section>
+        <h2 class="relatedHeadline">Related blogs</h2>
+        <div id="relatedBlogs" class="relatedBlogs">Loading</div>
+      </section>
+    </main>
+    <footer>
+      <div class="social_footer">
+        <i class="social_icon fab fa-facebook-f"></i>
+        <i class="social_icon fab fa-instagram"></i>
+        <i class="social_icon fab fa-snapchat"></i>
+        <i class="social_icon fab fa-twitter"></i>
+      </div>
+    </footer>
+  </body>
+  <script src="js/individualblog.js"></script>
 </html>

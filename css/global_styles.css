@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "roboto";
+  src: url("../font/Roboto-Regular.ttf");
+
+  font-family: "Segoe UI";
+  font-family: "cambria";
+  src: url("../fonts/cambria.ttc");
+}
+
+:root {
+  --primary-color: #9bd89b;
+  --secondary-color: #3590a2;
+  --secondary-text: "roboto";
+  --primary-text: "Segoe UI";
+  --butonLink-text: "cambria";
+}
+
+.current {
+  color: black;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--primary-text);
+}
+header,
+footer,
+p {
+  font-family: var(--secondary-text);
+}
+
+.error {
+  color: rgb(207, 7, 7);
+  display: none;
+  max-width: 250px;
+}
+
+/* header & footer styling */
+
+nav ul {
+  padding: 0px;
+  position: relative;
+  background-color: white;
+  list-style: none;
+}
+
+#navBtn {
+  display: none;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  display: flex;
+  background-color: var(--secondary-color);
+  margin: 8px auto;
+  justify-content: center;
+
+  max-width: 260px;
+}
+nav a:hover {
+  text-decoration: 2px underline;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  margin: -0.5em;
+}
+header {
+  margin-bottom: 10px;
+}
+
+h1,
+label,
+h2 {
+  color: var(--secondary-color);
+}
+
+p {
+  margin: 0px;
+}
+.logo {
+  margin-top: 15px;
+  width: 50%;
+}
+
+nav {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.navIcon {
+  color: black;
+  font-size: 2em;
+  position: relative;
+  float: right;
+  top: 10px;
+  right: 10px;
+}
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+footer {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* blogpost styles */
+
+.blogpost {
+  box-shadow: 0px 3px 6px #a59e9e29;
+}
+.blogpostDescription > a,
+.blogpostDescription > a {
+  color: #2d8091;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 1.3em;
+}
+.blogpostDescription > a:hover,
+.blogpostDescription > a:hover {
+  text-decoration: underline;
+}
+.blogpostDescription {
+  margin: 10px;
+}
+
+.blogpostDescription > h3 {
+  color: var(--secondary-color);
+  margin: 0px;
+}
+/*_____________________________*/
+
+.social_icon {
+  margin: 10px;
+  color: var(--secondary-color);
+  font-size: 1.4em;
+}
+.social_footer {
+  display: flex;
+  font-size: 2em;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  nav {
+    display: block;
+  }
+
+  .navIcon {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+  }
+  nav a {
+    margin: 10px;
+  }
+  .logo {
+    display: flex;
+    width: 30%;
+    margin: auto;
+  }
+}

@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Student Cooking | contact</title>
+    <meta
+      name="description"
+      content=" contact the bloggers of student cooking"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/global_styles.css" />
+    <link rel="stylesheet" href="css/contact_styles.css" />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="images/blogLogo1.png"
+          alt="community science muesum logo"
+          class="logo"
+      /></a>
+      <label class="hamburger-label" for="hamburger-menu"
+      ><i class="navIcon fas fa-bars"></i>
+    </label>
+    <input type="checkbox" id="hamburger-menu" />
+      <nav>
+        <ul>
+          <li>
+            <a  href="index.html" >Home</a>
+          </li>
+          <li><a href="blogposts.html">All blogposts</a></li>
+          <li><a href="about.html"> About Us</a></li>
+          <li><a class="current" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+      <form action="" id="form">
+        <div class ="formLayout">
+          <label for="name">Name</label>
+          <p class="instruction">Minimum 6 characters</p>
+          <input type="text" name="name" id="name" class="formInput" />
+          <p class="error" id="nameError">Name must contain minimum of 6 characters</p>
+
+          <label for="email"> Email</label>
+          <input type="text" name="email" id="email" class="formInput" />
+          <p class="error" id="emailError">Please input a valid email</p>
+
+          <label for="subject">Subject</label>
+          <p class="instruction">Minimum 16 characters</p>
+          <input type="text" name="subject" id="subject" class="formInput" />
+          <p class="error" id="subjectError">Please type in a subject containing minimum 16 characters</p>
+          <label for="message">Message</label>
+          <p class="instruction">Minimum 26 characters</p>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+          <p class="error" id="messageError">Please write a message containing minimum 26 characters</p>
+          <div id="formCompleted" class="completed"><p>Thank you for sending us a message</p></div>
+          <div class="formButtons">
+          <input type="submit" value="Send Message" />
+          <a href="index.html" class="cancel_button"> Cancel</a>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="social_footer">
+        <i class="social_icon fab fa-facebook-f"></i>
+        <i class="social_icon fab fa-instagram"></i>
+        <i class="social_icon fab fa-snapchat"></i>
+        <i class="social_icon fab fa-twitter"></i>
+      </div>
+    </footer>
+  </body>
+  <script src="js/contact.js"></script>
 </html>

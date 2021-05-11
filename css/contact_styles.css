@@ -1,0 +1,95 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 6px #a59e9e29;
+  max-width: 821px;
+  min-height: 728px;
+  margin: 10px auto 20px auto;
+}
+
+.formInput,
+textarea {
+  min-height: 47px;
+  font-size: 1.3em;
+}
+
+label,
+.instruction {
+  color: #2d8091;
+}
+
+.formLayout > label {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 21px;
+}
+.instruction {
+  margin: 0px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  color: white;
+  border: 1px solid #707070;
+  width: 122px;
+  height: 47px;
+  margin: 8px;
+}
+
+input[type="submit"],
+.cancel_button {
+  background-color: #2d8091;
+}
+input[type="submit"]:hover,
+.cancel_button:hover {
+  text-decoration: 2px underline;
+}
+
+.cancel_button {
+  color: white;
+  border: 1px solid #707070;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  height: 46px;
+  line-height: 290%;
+  width: 122px;
+}
+.formButtons {
+  display: flex;
+  position: relative;
+  left: 25px;
+  margin-top: 20px;
+}
+
+.formLayout {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+.nameEmail {
+  display: flex;
+  flex-direction: column;
+}
+.completed {
+  display: none;
+  min-height: 100px;
+  background: #2d8091;
+  margin: 10px;
+}
+.completed > p {
+  margin: auto;
+  font-size: 1em;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .nameEmail {
+    display: inline-block;
+  }
+}

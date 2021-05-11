@@ -1,0 +1,85 @@
+.headerImage {
+  background-image: url("../images/broccoliheader.jpg");
+  display: flex;
+  padding-top: 17%;
+  padding-bottom: 15%;
+  max-width: 90%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-size: 100%;
+  position: relative;
+}
+
+.content {
+  max-width: 900px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 300px;
+  justify-content: center;
+}
+
+.headerImage {
+  display: flex;
+  margin: auto;
+}
+
+.welcomeMessage {
+  margin: 10px;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+.blogposts {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  display: flex;
+}
+
+.blogpost {
+  margin: 10px;
+}
+.blogImg {
+  height: 154px;
+  width: 240px;
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 10px auto 40px auto;
+}
+.welcomeMessage > h1 {
+  font-size: 2.6em;
+  margin: auto;
+  text-align: center;
+}
+.welcomeMessage > p {
+  margin: 5px auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.previous,
+.next {
+  display: block;
+  font-size: 6em;
+  position: relative;
+  top: 80px;
+}
