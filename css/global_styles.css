@@ -29,7 +29,8 @@ footer,
 p,
 a,
 li,
-input[type="submit"] {
+input[type="submit"],
+label {
   font-family: var(--secondary-text);
 }
 
