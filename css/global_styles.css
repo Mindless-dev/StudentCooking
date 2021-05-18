@@ -20,12 +20,16 @@
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--primary-text);
 }
 header,
 footer,
-p {
+p,
+a,
+li,
+input[type="submit"] {
   font-family: var(--secondary-text);
 }
 
