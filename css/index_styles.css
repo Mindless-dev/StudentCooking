@@ -78,8 +78,8 @@ h1 {
 
 .previous,
 .next {
+  cursor: pointer;
   display: block;
   font-size: 6em;
   position: relative;
-  top: 80px;
 }

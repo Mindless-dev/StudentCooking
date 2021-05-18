@@ -7,6 +7,7 @@ const title = document.querySelector("title");
 const url2 = "https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts";
 const relatedBlogs = document.querySelector("#relatedBlogs");
 const modalContainer = document.querySelector("#modalContainer");
+const toTopOfPage = document.querySelector("#topOfPage");
 async function getBlog() {
   try {
     const response = await fetch(url);
@@ -33,8 +34,8 @@ async function getRelatedBlogs() {
 
     for (let i = 0; i < 3; i++) {
       relatedBlogs.innerHTML += `<section class="blogpost">
-    <img class="blogImgLatest" src="${blogs[i].better_featured_image.source_url}" alt= "${blogs[i].better_featured_image.alt_text}">
-    <div class="blogpostDescription"><h3>${blogs[i].title.rendered}</h3>
+      <a class="blogLink" href="individual_blogpost.html?id=${blogs[i].id}">
+      <img class="blogImgRelated" src="${blogs[i].better_featured_image.source_url}" alt= "${blogs[i].better_featured_image.alt_text}"> </a>    <div class="blogpostDescription"><h3>${blogs[i].title.rendered}</h3>
      ${blogs[i].excerpt.rendered}
      <a class="blogLink" href="individual_blogpost.html?id=${blogs[i].id}">view post</a></div></section>
      `;
@@ -64,5 +65,11 @@ window.onclick = function (event) {
 function createModal() {
   img = document.querySelectorAll("img");
   let modalImg = img[2];
-  modalContainer.innerHTML += `<div id="modal1" class="modal"><img id=modalImg src="${modalImg.src}"></div>`;
+  modalContainer.innerHTML += `<div id="modal1" class="modal"><img id=modalImg src="${modalImg.src}" alt="${modalImg.alt}"></div>`;
 }
+
+function scrollToTop() {
+  window.scrollTo(scrollY, 0);
+}
+
+toTopOfPage.addEventListener("click", scrollToTop);

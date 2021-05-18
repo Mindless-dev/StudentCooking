@@ -148,6 +148,38 @@ footer {
   margin: auto;
 }
 
+.loading {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  font-size: 3em;
+  color: var(--secondary-color);
+  display: flex;
+  margin: auto;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.topOfPage {
+  background-color: var(--secondary-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  color: white;
+  min-width: 80px;
+  font-size: 2em;
+  border-radius: 28px;
+  margin: auto;
+}
+
+.arrowUp {
+  margin-top: 14px;
+}
+
 @media (min-width: 600px) {
   nav {
     display: block;
@@ -180,5 +212,8 @@ footer {
     display: flex;
     width: 30%;
     margin: auto;
+  }
+  .topOfPage {
+    display: none;
   }
 }

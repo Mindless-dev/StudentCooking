@@ -68,3 +68,7 @@ h1 {
 .blogpostDescription {
   margin: 10px;
 }
+
+.topOfPage {
+  display: none;
+}

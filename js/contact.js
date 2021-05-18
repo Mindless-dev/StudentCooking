@@ -8,6 +8,7 @@ const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const thankyouMessage = document.querySelector("#formCompleted");
+const formButtons = document.querySelector(".formButtons");
 
 function formValidation(event) {
   let counter = 0;
@@ -42,6 +43,7 @@ function formValidation(event) {
   }
   if (counter === 4) {
     thankyouMessage.style.display = "flex";
+    formButtons.style.display = "none";
   }
 }
 

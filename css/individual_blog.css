@@ -1,3 +1,7 @@
+h1 {
+  margin: 10px;
+}
+
 .individualBlog,
 .comments {
   box-shadow: 0px 3px 6px #a59e9e29;
@@ -22,10 +26,10 @@
   margin: 10px;
 }
 
-.blogpost > img {
-  height: 220px;
+.blogImgRelated {
+  height: 200px;
+  max-width: 300px;
 }
-
 .relatedBlogs {
   display: flex;
   flex-direction: row;
@@ -83,6 +87,7 @@
 .wp-block-image > img {
   width: 70%;
   height: auto;
+  cursor: pointer;
 }
 
 .blogLayout {

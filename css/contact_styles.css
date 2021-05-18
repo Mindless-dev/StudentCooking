@@ -78,16 +78,21 @@ input[type="submit"]:hover,
 }
 .completed {
   display: none;
-  min-height: 100px;
+  max-height: 60px;
   background: #2d8091;
   margin: 10px;
-}
-.completed > p {
-  margin: auto;
-  font-size: 1em;
   color: white;
+  text-decoration: none;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
 }
 
+.completed:hover {
+  text-decoration: underline;
+}
 @media (min-width: 600px) {
   .nameEmail {
     display: inline-block;
