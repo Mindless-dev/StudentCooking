@@ -49,9 +49,6 @@ nav ul {
   list-style: none;
 }
 
-#navBtn {
-  display: none;
-}
 nav a {
   color: white;
   text-decoration: none;
@@ -60,7 +57,6 @@ nav a {
   background-color: var(--secondary-color);
   margin: 8px auto;
   justify-content: center;
-
   max-width: 260px;
 }
 nav a:hover {
@@ -95,19 +91,20 @@ nav {
   margin-bottom: 10px;
 }
 
-.navIcon {
+.hamburgerMenu {
   color: black;
   font-size: 2em;
   position: relative;
+  margin-right: 10px;
   float: right;
-  top: 10px;
-  right: 10px;
+  background-color: var(--primary-color);
+  border: none;
 }
 #hamburger-menu {
   display: none;
 }
 
-#hamburger-menu:checked ~ nav {
+.mobileNav {
   display: block;
 }
 footer {
@@ -186,6 +183,9 @@ footer {
 }
 
 @media (min-width: 600px) {
+  .hamburgerMenu {
+    display: none;
+  }
   nav {
     display: block;
   }

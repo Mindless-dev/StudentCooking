@@ -114,3 +114,71 @@ h1 {
   max-width: 100%;
   height: auto;
 }
+
+.linkTree {
+  display: flex;
+  font-size: 1.4em;
+}
+
+#backBtn {
+  font-size: 0.9em;
+  background-color: #2d8091;
+  color: white;
+  border: none;
+  padding: 0.8em;
+}
+#backBtn:hover {
+  text-decoration: underline 1px;
+}
+
+#backBtnLayout {
+  display: flex;
+  max-width: 950px;
+  margin: 10px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+form > input,
+textarea {
+  max-width: 400px;
+}
+form > input {
+  height: 30px;
+}
+form > label {
+  margin: 5px 0px;
+  color: black;
+}
+
+.comments > h3 {
+  color: var(--secondary-color);
+  margin: 10px;
+}
+
+.commentError {
+  display: none;
+  max-width: 380px;
+  margin-top: 10px;
+  padding: 10px;
+  border: solid 1px red;
+}
+
+.commentSucess {
+  text-align: center;
+  color: green;
+  font-size: 1.5em;
+  display: none;
+  padding: 50px;
+  border: solid var(--secondary-color) 1px;
+  margin: 10px auto;
+}
+.noComments {
+  text-align: center;
+  padding: 5px;
+  border: solid var(--secondary-color);
+}

@@ -22,13 +22,10 @@
       <a href="index.html">
         <img
           src="images/blogLogo1.png"
-          alt="community science muesum logo"
+          alt="student cooking logo"
           class="logo"
       /></a>
-      <label class="hamburger-label" for="hamburger-menu"
-        ><i class="navIcon fas fa-bars"></i>
-      </label>
-      <input type="checkbox" id="hamburger-menu" />
+      <button class="hamburgerMenu" id="hamburgerMenu"><i class="navIcon fas fa-bars"></i></button>
       <nav>
         <ul>
           <li>
@@ -41,27 +38,32 @@
       </nav>
     </header>
     <main>
+      <div id="backBtnLayout">
+        <button class="backBtn" id="backBtn">Previous Page</button>
+      </div>
       <div id="blogpost">  <i class="loading fa fa-spinner" ></i></div>
       <div id="modalContainer"></div>
       <section class="comments">
-        <div class="comment">
-          <h4>Name</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            consectetur nobis facere.
-          </p>
-          <div class="commentVote">
-            <section class="upvote">
-              <span id=upvote><i class="fas fa-chevron-circle-up"></i></span>
-              <p>0</p>
-            </section>
-            <section class="downvote">
-              <span id="downvote"><i class="fas fa-chevron-circle-down"></i></span>
-              <p>0</p>
-              </section>
-          </div>
+        <h3>Comments</h3>
+        <div id="commentSection">
+          <i class="loading fa fa-spinner" ></i>
         </div>
-        <button class="commentBtn">Comment</button>
+        <form>
+          <input type="hidden" id="postId">
+          <label for="name">Name</label>
+          <p class="instruction">Minimum 3 characters</p>
+          <input type="text" id="name">
+          <p class="commentError" id="nameError">please input your name minimum 3 characters</p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+          <p class="commentError" id="emailError">Please input a valid email</p>
+          <label for="comment">Comment</label>
+          <p class="instruction">Minimum 20 characters</p>
+          <textarea name="message" id="comment" cols="20" rows="5"></textarea>
+          <p class="commentError" id="commentError">Please input a comment that contains minimum 20 characters</p>
+          <input id="commentBtn" type="submit"class="commentBtn" Value=Comment>
+        </form>
+        <p class="commentSucess">Thank you for your Comment</p>
       </section>
       
       </section>
@@ -80,5 +82,6 @@
       </div>
     </footer>
   </body>
+  <script src="js/global.js"></script>
   <script src="js/individualblog.js"></script>
 </html>

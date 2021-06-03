@@ -9,7 +9,7 @@
 }
 
 .messageButton {
-  background-color: #2d8091;
+  background-color: var(--secondary-color);
   text-decoration: none;
   color: white;
   font-size: 21px;

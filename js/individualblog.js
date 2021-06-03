@@ -8,6 +8,8 @@ const url2 = "https://holmenfrontend.no/foodblog/wp-json/wp/v2/posts";
 const relatedBlogs = document.querySelector("#relatedBlogs");
 const modalContainer = document.querySelector("#modalContainer");
 const toTopOfPage = document.querySelector("#topOfPage");
+const backBtn = document.querySelector("#backBtn");
+
 async function getBlog() {
   try {
     const response = await fetch(url);
@@ -73,3 +75,130 @@ function scrollToTop() {
 }
 
 toTopOfPage.addEventListener("click", scrollToTop);
+
+function goBack() {
+  window.history.go(-1);
+}
+
+backBtn.addEventListener("click", goBack);
+let sucess = 0;
+
+/*_____________________________post and fetch of comments_______________________________*/
+
+const commentUrl = "http://holmenfrontend.no/foodblog/wp-json/wp/v2/comments";
+const submitComment = document.querySelector("#commentBtn");
+const postIdInput = document.querySelector("#postId");
+const firstName = document.querySelector("#name");
+const nameError = document.querySelector("#nameError");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+const comment = document.querySelector("#comment");
+const commentError = document.querySelector("#commentError");
+const commentSucess = document.querySelector(".commentSucess");
+submitComment.addEventListener("click", commentValidation);
+const form = document.querySelector("form");
+
+function commentValidation(event) {
+  event.preventDefault();
+  sucess = 0;
+  if (characterLength(firstName.value, 3)) {
+    nameError.style.display = "none";
+    sucess++;
+  } else {
+    nameError.style.display = "block";
+  }
+  if (emailValidation(email.value) & (email.value.length > 0)) {
+    emailError.style.display = "none";
+    sucess++;
+  } else {
+    emailError.style.display = "block";
+  }
+
+  if (characterLength(comment.value, 20)) {
+    commentError.style.display = "none";
+    sucess++;
+  } else {
+    commentError.style.display = "block";
+  }
+
+  if (sucess === 3) {
+    const postId = parseInt(id);
+    const formData = JSON.stringify({
+      post: `${postId}`,
+      author_name: `${firstName.value}`,
+      author_email: `${email.value}`,
+      content: `${comment.value}`,
+    });
+    sendComment(formData);
+
+    async function sendComment(data) {
+      try {
+        let postOptions = {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: data,
+        };
+        const response = await fetch(commentUrl, postOptions);
+        form.style.display = "none";
+        commentSucess.style.display = "flex";
+
+        setTimeout(function sucess() {
+          commentSucess.style.display = "none";
+          form.style.display = "flex";
+        }, 3000);
+        firstName.value = "";
+        email.value = "";
+        comment.value = "";
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+}
+
+const characterLength = function (value, characters) {
+  if (value.trim().length >= characters) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function emailValidation(email) {
+  const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+  const emailMatch = regEx.test(email);
+  return emailMatch;
+}
+
+const postCommentsUrl = `https://holmenfrontend.no/foodblog/wp-json/wp/v2/comments?post=${id}`;
+const commentSection = document.querySelector("#commentSection");
+
+async function getPostComments() {
+  let response = await fetch(postCommentsUrl);
+  let comments = await response.json();
+  commentSection.innerHTML = "";
+  createCommentHtml(comments);
+}
+
+function createCommentHtml(comments) {
+  if (comments.length === 0) {
+    commentSection.innerHTML = `<p class="noComments">No Comments</p>`;
+  }
+  for (let i = 0; i < comments.length; i++) {
+    if (comments.length != 0) {
+      commentSection.innerHTML += `<section class="comment">
+      <h4>${comments[i].author_name}</h4>
+      ${comments[i].content.rendered}
+      <div class="commentVote">
+      <section class="upvote">
+        <span id=upvote><i class="fas fa-chevron-circle-up"></i></span>
+        <p>0</p>
+      </section>
+      <section class="downvote">
+        <span id="downvote"><i class="fas fa-chevron-circle-down"></i></span>
+        <p>0</p>
+        </section></div></div>`;
+    }
+  }
+}
+getPostComments();

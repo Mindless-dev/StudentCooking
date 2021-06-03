@@ -22,10 +22,7 @@
       <a href="index.html">
         <img src="images/blogLogo1.png" alt="student cooking logo" class="logo"
       /></a>
-      <label class="hamburger-label" for="hamburger-menu"
-        ><i class="navIcon fas fa-bars"></i>
-      </label>
-      <input type="checkbox" id="hamburger-menu" />
+      <button class="hamburgerMenu" id="hamburgerMenu"><i class="navIcon fas fa-bars"></i></button>
       <nav>
         <ul>
           <li>
@@ -37,9 +34,7 @@
         </ul>
       </nav>
     </header>
-
     <main>
-     
         <div class="headerImage"></div>
         <section class="welcomeMessage">
           <h1>Welcome to Student Cooking</h1>
@@ -51,9 +46,9 @@
       </div>
       <h2>Latest Blogposts</h2>
       <div class="blogposts">
-        <span id="previous"> <i class="previous fas fa-angle-left"></i></span>
+        <button id="previous"><i class="previous fas fa-angle-left"></i></button>
         <div id="content-wrapper" class="content"><i class="loading fa fa-spinner" ></i></div>
-        <span id="next"><i class="next fas fa-angle-right"></i></span>
+        <button id="next"><i class="next fas fa-angle-right"></i></button>
         </div>
     </main>
     <footer>
@@ -65,5 +60,6 @@
         </div>
       </footer>
   </body>
+  <script src="js/global.js"></script>
   <script src="js/index.js"></script>
 </html>

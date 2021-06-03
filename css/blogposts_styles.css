@@ -72,3 +72,13 @@ h1 {
 .topOfPage {
   display: none;
 }
+
+.filter {
+  max-width: 835px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+h3 {
+  color: var(--secondary-color);
+}

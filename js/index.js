@@ -42,9 +42,9 @@ async function getBlogPosts() {
        <a class="blogLink" href="individual_blogpost.html?id=${blogs[i].id}">view post</a></div></section>`;
     }
     next.style.position = "relative";
-    next.style.top = "60px";
+    next.style.top = "10px";
     previous.style.position = "relative";
-    previous.style.top = "60px";
+    previous.style.top = "10px";
   } catch (error) {
     blogpostsContainer.innerHTML = `<p class="error"> and error occured<p>`;
   }

@@ -83,3 +83,10 @@ h1 {
   font-size: 6em;
   position: relative;
 }
+
+#previous,
+#next {
+  background-color: white;
+  border: none;
+  width: 49px;
+}
