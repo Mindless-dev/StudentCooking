@@ -85,7 +85,7 @@ let sucess = 0;
 
 /*_____________________________post and fetch of comments_______________________________*/
 
-const commentUrl = "http://holmenfrontend.no/foodblog/wp-json/wp/v2/comments";
+const commentUrl = "https://holmenfrontend.no/foodblog/wp-json/wp/v2/comments";
 const submitComment = document.querySelector("#commentBtn");
 const postIdInput = document.querySelector("#postId");
 const firstName = document.querySelector("#name");
